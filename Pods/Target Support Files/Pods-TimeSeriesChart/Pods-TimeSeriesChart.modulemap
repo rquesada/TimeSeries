@@ -1,0 +1,6 @@
+framework module Pods_TimeSeriesChart {
+  umbrella header "Pods-TimeSeriesChart-umbrella.h"
+
+  export *
+  module * { export * }
+}

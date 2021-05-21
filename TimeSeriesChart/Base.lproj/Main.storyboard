@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw4-Yg-XBJ">
+                                <rect key="frame" x="166.5" y="433" width="81" height="30"/>
+                                <state key="normal" title="Time Series"/>
+                                <connections>
+                                    <segue destination="3l8-Ec-k7Z" kind="show" id="skH-PW-Rrf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gx-KL-81A">
+                                <rect key="frame" x="172.5" y="493" width="69" height="30"/>
+                                <state key="normal" title="SparkLine"/>
+                                <connections>
+                                    <segue destination="HJQ-ub-L31" kind="show" id="nXa-3C-O77"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bw4-Yg-XBJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fs7-A7-M8o"/>
+                            <constraint firstItem="2Gx-KL-81A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6H-Kc-GJI"/>
+                            <constraint firstItem="bw4-Yg-XBJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aRT-wa-Okz"/>
+                            <constraint firstItem="2Gx-KL-81A" firstAttribute="top" secondItem="bw4-Yg-XBJ" secondAttribute="bottom" constant="30" id="waN-6e-Y2V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--Time Series View Controller-->
+        <scene sceneID="mpm-lJ-hhe">
+            <objects>
+                <viewController id="3l8-Ec-k7Z" customClass="TimeSeriesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TOJ-Vl-mH4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Series" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTp-CE-q5X">
+                                <rect key="frame" x="162" y="20" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-rh-DBC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="71" width="374" height="707"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hSP-cj-8zF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hSP-cj-8zF" firstAttribute="trailing" secondItem="7HW-rh-DBC" secondAttribute="trailing" constant="20" id="0yu-nw-QLV"/>
+                            <constraint firstItem="7HW-rh-DBC" firstAttribute="top" secondItem="iTp-CE-q5X" secondAttribute="bottom" constant="30" id="Jkb-DB-tOk"/>
+                            <constraint firstItem="hSP-cj-8zF" firstAttribute="bottom" secondItem="7HW-rh-DBC" secondAttribute="bottom" constant="30" id="Umq-KN-vfG"/>
+                            <constraint firstItem="7HW-rh-DBC" firstAttribute="leading" secondItem="hSP-cj-8zF" secondAttribute="leading" constant="20" id="b6L-m7-QjK"/>
+                            <constraint firstItem="iTp-CE-q5X" firstAttribute="top" secondItem="hSP-cj-8zF" secondAttribute="top" constant="20" id="ehe-CW-te8"/>
+                            <constraint firstItem="iTp-CE-q5X" firstAttribute="centerX" secondItem="TOJ-Vl-mH4" secondAttribute="centerX" id="ve0-Bl-qNh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0p-d2-aNL"/>
+                    <connections>
+                        <outlet property="timeSeriesGraph" destination="7HW-rh-DBC" id="shq-YF-gil"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3Q-BF-COA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="96.428571428571431"/>
+        </scene>
+        <!--Sparkline View Controller-->
+        <scene sceneID="eY5-CM-3lz">
+            <objects>
+                <viewController id="HJQ-ub-L31" customClass="SparklineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enS-VZ-ZfO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sparkline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNE-CT-Hpf">
+                                <rect key="frame" x="171.5" y="30" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rhg-xH-s8L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FNE-CT-Hpf" firstAttribute="top" secondItem="Rhg-xH-s8L" secondAttribute="top" constant="30" id="9Lj-Ru-KjW"/>
+                            <constraint firstItem="FNE-CT-Hpf" firstAttribute="centerX" secondItem="enS-VZ-ZfO" secondAttribute="centerX" id="HzH-f0-ReD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jXc-cE-qzk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTB-kG-4bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.66666666666674" y="828.34821428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
