@@ -17,17 +17,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw4-Yg-XBJ">
-                                <rect key="frame" x="166.5" y="433" width="81" height="30"/>
+                                <rect key="frame" x="166.5" y="244" width="81" height="30"/>
                                 <state key="normal" title="Time Series"/>
                                 <connections>
                                     <segue destination="3l8-Ec-k7Z" kind="show" id="skH-PW-Rrf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gx-KL-81A">
-                                <rect key="frame" x="172.5" y="493" width="69" height="30"/>
+                                <rect key="frame" x="172.5" y="304" width="69" height="30"/>
                                 <state key="normal" title="SparkLine"/>
                                 <connections>
                                     <segue destination="HJQ-ub-L31" kind="show" id="nXa-3C-O77"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izt-vj-eXB">
+                                <rect key="frame" x="128.5" y="364" width="157" height="30"/>
+                                <state key="normal" title="Time Series with Dates"/>
+                                <connections>
+                                    <segue destination="gre-sG-9Xg" kind="show" id="Ptz-ns-gLg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXy-YC-fCa">
+                                <rect key="frame" x="148" y="424" width="118" height="30"/>
+                                <state key="normal" title="Time Series Over"/>
+                                <connections>
+                                    <segue destination="0vy-vw-jwQ" kind="show" id="hDB-Ea-LDi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -35,8 +49,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bw4-Yg-XBJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fs7-A7-M8o"/>
+                            <constraint firstItem="lXy-YC-fCa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gn2-g5-lKW"/>
+                            <constraint firstItem="lXy-YC-fCa" firstAttribute="top" secondItem="izt-vj-eXB" secondAttribute="bottom" constant="30" id="JI9-q1-DbI"/>
                             <constraint firstItem="2Gx-KL-81A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6H-Kc-GJI"/>
-                            <constraint firstItem="bw4-Yg-XBJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aRT-wa-Okz"/>
+                            <constraint firstItem="izt-vj-eXB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c0b-37-092"/>
+                            <constraint firstItem="izt-vj-eXB" firstAttribute="top" secondItem="2Gx-KL-81A" secondAttribute="bottom" constant="30" id="psL-aN-AAY"/>
+                            <constraint firstItem="bw4-Yg-XBJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="si9-Et-k1n"/>
                             <constraint firstItem="2Gx-KL-81A" firstAttribute="top" secondItem="bw4-Yg-XBJ" secondAttribute="bottom" constant="30" id="waN-6e-Y2V"/>
                         </constraints>
                     </view>
@@ -44,6 +62,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--Time Series Timeline View Controller-->
+        <scene sceneID="TOB-C9-mwY">
+            <objects>
+                <viewController id="gre-sG-9Xg" customClass="TimeSeriesTimelineViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ocw-Kq-8Ty">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Series with Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6b-Q6-C7T">
+                                <rect key="frame" x="120" y="30" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-P0-W5b" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="81" width="374" height="420"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="gkI-4m-jcy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iNS-FC-bz0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M6b-Q6-C7T" firstAttribute="centerX" secondItem="Ocw-Kq-8Ty" secondAttribute="centerX" id="Gan-Qp-XLa"/>
+                            <constraint firstItem="FCe-P0-W5b" firstAttribute="leading" secondItem="iNS-FC-bz0" secondAttribute="leading" constant="20" id="UvO-t8-wRu"/>
+                            <constraint firstItem="iNS-FC-bz0" firstAttribute="trailing" secondItem="FCe-P0-W5b" secondAttribute="trailing" constant="20" id="d5n-A6-JvO"/>
+                            <constraint firstItem="FCe-P0-W5b" firstAttribute="top" secondItem="M6b-Q6-C7T" secondAttribute="bottom" constant="30" id="qTA-JU-5GU"/>
+                            <constraint firstItem="M6b-Q6-C7T" firstAttribute="top" secondItem="iNS-FC-bz0" secondAttribute="top" constant="30" id="z3q-G3-Fmx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QTh-Sm-Iuv"/>
+                    <connections>
+                        <outlet property="timeSeriesGraph" destination="FCe-P0-W5b" id="BK5-CP-Po4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRY-ce-2ra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="-689.0625"/>
         </scene>
         <!--Time Series View Controller-->
         <scene sceneID="mpm-lJ-hhe">
@@ -111,6 +170,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTB-kG-4bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="866.66666666666674" y="828.34821428571422"/>
+        </scene>
+        <!--Time Series Hover View Controller-->
+        <scene sceneID="vHJ-CN-NRl">
+            <objects>
+                <viewController id="0vy-vw-jwQ" customClass="TimeSeriesHoverViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEw-P5-N5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8R-8r-4AW" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="30" width="374" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2CK-tq-WCg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v8R-8r-4AW" firstAttribute="leading" secondItem="2CK-tq-WCg" secondAttribute="leading" constant="20" id="Dc8-ei-JkI"/>
+                            <constraint firstItem="2CK-tq-WCg" firstAttribute="bottom" secondItem="v8R-8r-4AW" secondAttribute="bottom" constant="30" id="IQa-75-el6"/>
+                            <constraint firstItem="v8R-8r-4AW" firstAttribute="top" secondItem="2CK-tq-WCg" secondAttribute="top" constant="30" id="hj1-ns-NtZ"/>
+                            <constraint firstItem="2CK-tq-WCg" firstAttribute="trailing" secondItem="v8R-8r-4AW" secondAttribute="trailing" constant="20" id="rmF-R6-FA4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jaj-zz-SCF"/>
+                    <connections>
+                        <outlet property="timeSeriesGraph" destination="v8R-8r-4AW" id="gBr-4m-gLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc0-DE-vka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="1574"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,19 @@
 		768238A82653179D00051F69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 768238A72653179D00051F69 /* main.m */; };
 		768238B726531A8400051F69 /* TimeSeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768238B626531A8400051F69 /* TimeSeriesViewController.m */; };
 		768238BC26531AE600051F69 /* SparklineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768238BB26531AE600051F69 /* SparklineViewController.m */; };
+		A0127E86265F00E60042726C /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0127E85265F00E60042726C /* DateValueFormatter.m */; };
+		A0127EA3265F09770042726C /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0127EA2265F09770042726C /* ChartUtils.swift */; };
+		A0127EA6265F09E00042726C /* Sequence+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0127EA5265F09E00042726C /* Sequence+KeyPath.swift */; };
+		A034D9D9266944A60041BF85 /* TTMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = A034D9D8266944A60041BF85 /* TTMarker.m */; };
+		A034D9E026698C0B0041BF85 /* TimeSeriesHoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A034D9DF26698C0B0041BF85 /* TimeSeriesHoverViewController.m */; };
+		A034D9E4266999DB0041BF85 /* MarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A034D9E3266999DB0041BF85 /* MarkerView.xib */; };
+		A04B3721276148EE00254809 /* CustomEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04B3720276148EE00254809 /* CustomEntry.swift */; };
+		A04C73C2266003C700E09D06 /* TimeSeriesTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A04C73C1266003C700E09D06 /* TimeSeriesTimelineViewController.m */; };
+		A06FB251275FFF0100A5CFA6 /* CustomLineChartRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06FB250275FFF0100A5CFA6 /* CustomLineChartRenderer.swift */; };
+		A098467026701427000AC122 /* SwiftParentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A098466F26701427000AC122 /* SwiftParentClass.swift */; };
+		A09DD5CA2668354F00182073 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09DD5C92668354F00182073 /* BalloonMarker.swift */; };
+		A0CFB59826BC8B7C00183BCD /* CustomLineRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFB59726BC8B7C00183BCD /* CustomLineRenderer.swift */; };
+		A0E1D256275829290004597E /* CustonLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1D255275829290004597E /* CustonLineChartView.swift */; };
 		F1DE1F27E7F5AA4C30342B5C /* Pods_TimeSeriesChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639B75E3DE304F0A9344CB4E /* Pods_TimeSeriesChart.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +51,24 @@
 		768238B626531A8400051F69 /* TimeSeriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSeriesViewController.m; sourceTree = "<group>"; };
 		768238BA26531AE600051F69 /* SparklineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparklineViewController.h; sourceTree = "<group>"; };
 		768238BB26531AE600051F69 /* SparklineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SparklineViewController.m; sourceTree = "<group>"; };
+		A0127E84265F00E60042726C /* DateValueFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
+		A0127E85265F00E60042726C /* DateValueFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateValueFormatter.m; sourceTree = "<group>"; };
+		A0127E89265F076B0042726C /* TimeSeriesChart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimeSeriesChart-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0127EA2265F09770042726C /* ChartUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUtils.swift; sourceTree = "<group>"; };
+		A0127EA5265F09E00042726C /* Sequence+KeyPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+KeyPath.swift"; sourceTree = "<group>"; };
+		A034D9D7266944A60041BF85 /* TTMarker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMarker.h; sourceTree = "<group>"; };
+		A034D9D8266944A60041BF85 /* TTMarker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTMarker.m; sourceTree = "<group>"; };
+		A034D9DE26698C0B0041BF85 /* TimeSeriesHoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSeriesHoverViewController.h; sourceTree = "<group>"; };
+		A034D9DF26698C0B0041BF85 /* TimeSeriesHoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSeriesHoverViewController.m; sourceTree = "<group>"; };
+		A034D9E3266999DB0041BF85 /* MarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkerView.xib; sourceTree = "<group>"; };
+		A04B3720276148EE00254809 /* CustomEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEntry.swift; sourceTree = "<group>"; };
+		A04C73C0266003C700E09D06 /* TimeSeriesTimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSeriesTimelineViewController.h; sourceTree = "<group>"; };
+		A04C73C1266003C700E09D06 /* TimeSeriesTimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSeriesTimelineViewController.m; sourceTree = "<group>"; };
+		A06FB250275FFF0100A5CFA6 /* CustomLineChartRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineChartRenderer.swift; sourceTree = "<group>"; };
+		A098466F26701427000AC122 /* SwiftParentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftParentClass.swift; sourceTree = "<group>"; };
+		A09DD5C92668354F00182073 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		A0CFB59726BC8B7C00183BCD /* CustomLineRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLineRenderer.swift; sourceTree = "<group>"; };
+		A0E1D255275829290004597E /* CustonLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonLineChartView.swift; sourceTree = "<group>"; };
 		CA60C0B0487E1982D4637981 /* Pods-TimeSeriesChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeSeriesChart.release.xcconfig"; path = "Target Support Files/Pods-TimeSeriesChart/Pods-TimeSeriesChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +122,10 @@
 		768238942653179B00051F69 /* TimeSeriesChart */ = {
 			isa = PBXGroup;
 			children = (
+				A098466E26701408000AC122 /* Swift */,
+				A0127E9D265F091C0042726C /* Components */,
+				A0127E96265F08930042726C /* Utils */,
+				A0127E83265F006D0042726C /* Formaters */,
 				768238B926531AD600051F69 /* SparkLine */,
 				768238B4265319BB00051F69 /* TimeSeriesGraph */,
 				768238952653179B00051F69 /* AppDelegate.h */,
@@ -111,6 +146,9 @@
 		768238B4265319BB00051F69 /* TimeSeriesGraph */ = {
 			isa = PBXGroup;
 			children = (
+				A0E1D254275829000004597E /* Views */,
+				A034D9DD26698BC00041BF85 /* Hover */,
+				A04C73BA265FFF7E00E09D06 /* Dates */,
 				768238B526531A8400051F69 /* TimeSeriesViewController.h */,
 				768238B626531A8400051F69 /* TimeSeriesViewController.m */,
 			);
@@ -124,6 +162,73 @@
 				768238BB26531AE600051F69 /* SparklineViewController.m */,
 			);
 			path = SparkLine;
+			sourceTree = "<group>";
+		};
+		A0127E83265F006D0042726C /* Formaters */ = {
+			isa = PBXGroup;
+			children = (
+				A0127E84265F00E60042726C /* DateValueFormatter.h */,
+				A0127E85265F00E60042726C /* DateValueFormatter.m */,
+				A0127E89265F076B0042726C /* TimeSeriesChart-Bridging-Header.h */,
+			);
+			path = Formaters;
+			sourceTree = "<group>";
+		};
+		A0127E96265F08930042726C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0127EA2265F09770042726C /* ChartUtils.swift */,
+				A0127EA5265F09E00042726C /* Sequence+KeyPath.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A0127E9D265F091C0042726C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A09DD5C92668354F00182073 /* BalloonMarker.swift */,
+				A034D9D7266944A60041BF85 /* TTMarker.h */,
+				A034D9D8266944A60041BF85 /* TTMarker.m */,
+				A034D9E3266999DB0041BF85 /* MarkerView.xib */,
+				A06FB250275FFF0100A5CFA6 /* CustomLineChartRenderer.swift */,
+				A04B3720276148EE00254809 /* CustomEntry.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A034D9DD26698BC00041BF85 /* Hover */ = {
+			isa = PBXGroup;
+			children = (
+				A034D9DE26698C0B0041BF85 /* TimeSeriesHoverViewController.h */,
+				A034D9DF26698C0B0041BF85 /* TimeSeriesHoverViewController.m */,
+			);
+			path = Hover;
+			sourceTree = "<group>";
+		};
+		A04C73BA265FFF7E00E09D06 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				A04C73C0266003C700E09D06 /* TimeSeriesTimelineViewController.h */,
+				A04C73C1266003C700E09D06 /* TimeSeriesTimelineViewController.m */,
+			);
+			path = Dates;
+			sourceTree = "<group>";
+		};
+		A098466E26701408000AC122 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				A098466F26701427000AC122 /* SwiftParentClass.swift */,
+				A0CFB59726BC8B7C00183BCD /* CustomLineRenderer.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		A0E1D254275829000004597E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0E1D255275829290004597E /* CustonLineChartView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +263,7 @@
 				TargetAttributes = {
 					768238912653179B00051F69 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -187,6 +293,7 @@
 				768238A52653179D00051F69 /* LaunchScreen.storyboard in Resources */,
 				768238A22653179D00051F69 /* Assets.xcassets in Resources */,
 				768238A02653179B00051F69 /* Main.storyboard in Resources */,
+				A034D9E4266999DB0041BF85 /* MarkerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +347,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7682389D2653179B00051F69 /* ViewController.m in Sources */,
+				A034D9E026698C0B0041BF85 /* TimeSeriesHoverViewController.m in Sources */,
+				A098467026701427000AC122 /* SwiftParentClass.swift in Sources */,
+				A09DD5CA2668354F00182073 /* BalloonMarker.swift in Sources */,
+				A0CFB59826BC8B7C00183BCD /* CustomLineRenderer.swift in Sources */,
+				A06FB251275FFF0100A5CFA6 /* CustomLineChartRenderer.swift in Sources */,
+				A0E1D256275829290004597E /* CustonLineChartView.swift in Sources */,
+				A04C73C2266003C700E09D06 /* TimeSeriesTimelineViewController.m in Sources */,
 				768238972653179B00051F69 /* AppDelegate.m in Sources */,
+				A034D9D9266944A60041BF85 /* TTMarker.m in Sources */,
 				768238A82653179D00051F69 /* main.m in Sources */,
 				768238B726531A8400051F69 /* TimeSeriesViewController.m in Sources */,
+				A0127EA3265F09770042726C /* ChartUtils.swift in Sources */,
+				A0127EA6265F09E00042726C /* Sequence+KeyPath.swift in Sources */,
+				A0127E86265F00E60042726C /* DateValueFormatter.m in Sources */,
+				A04B3721276148EE00254809 /* CustomEntry.swift in Sources */,
 				768238BC26531AE600051F69 /* SparklineViewController.m in Sources */,
 				7682389A2653179B00051F69 /* SceneDelegate.m in Sources */,
 			);
@@ -388,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7AYQTKEJ;
 				INFOPLIST_FILE = TimeSeriesChart/Info.plist;
@@ -397,6 +517,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.startx.TimeSeriesChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeSeriesChart/Formaters/TimeSeriesChart-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -407,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VA7AYQTKEJ;
 				INFOPLIST_FILE = TimeSeriesChart/Info.plist;
@@ -416,6 +540,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.startx.TimeSeriesChart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TimeSeriesChart/Formaters/TimeSeriesChart-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
