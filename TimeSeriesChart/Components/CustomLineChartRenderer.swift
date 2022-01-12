@@ -45,7 +45,7 @@ class CustomLineChartRenderer: LineChartRenderer {
     
     var mShadedAreaPoints: [(CustomEntry,CustomEntry)] = []
     
-    override public func drawLinear(context: CGContext, dataSet: ILineChartDataSet)
+    override public func drawLinear(context: CGContext, dataSet: LineChartDataSetProtocol)
     {
         guard let dataProvider = dataProvider else { return }
         
@@ -210,7 +210,8 @@ class CustomLineChartRenderer: LineChartRenderer {
             height: _sizeBuffer[0].y
         )
         
-        context.setFillColor(getColor(dataStatus: dataStatus))
+        guard let color = diagonalLineColor(.gray).cgColor.copy(alpha: 0.15) else{ return }  //getColor(dataStatus: dataStatus)
+        context.setFillColor(color)
         context.fill(rect)
     }
     
@@ -241,6 +242,36 @@ class CustomLineChartRenderer: LineChartRenderer {
             return UIColor.yellow.cgColor.copy(alpha: 0.15)!
         }
     }
+    
+    func diagonalLineColor(_ color:UIColor) -> UIColor {
+        
+        let backgroundColor = UIColor.clear
+        let sqrt2: CGFloat = sqrt(2.0)
+        let barThickness: CGFloat = 1.0
+        let spaceThickness: CGFloat = 10.0
+        let dim: CGFloat = (barThickness + spaceThickness) * sqrt2
 
+            let img = UIGraphicsImageRenderer(size: .init(width: dim, height: dim)).image { context in
+
+                // rotate the context and shift up
+                context.cgContext.rotate(by: CGFloat.pi / 4.0)
+                context.cgContext.translateBy(x: 0.0, y: -(spaceThickness + barThickness))
+                
+                let bar1 = UIBezierPath(rect: .init(x: 0.0, y: 0.0, width: dim * sqrt2, height: barThickness))
+                let bar2 = UIBezierPath(rect: .init(x: 0.0, y: barThickness, width: dim * sqrt2, height: spaceThickness))
+                
+                
+                let bars: [(UIColor,UIBezierPath)] = [ (color, bar1), (backgroundColor, bar2)]
+                
+              
+                bars.forEach {  $0.0.setFill(); $0.1.fill() }
+                
+                // move down and paint again
+                context.cgContext.translateBy(x: 0.0, y: (spaceThickness + barThickness))
+                bars.forEach {  $0.0.setFill(); $0.1.fill() }
+            }
+            
+            return UIColor(patternImage: img)
+        }
 
 }

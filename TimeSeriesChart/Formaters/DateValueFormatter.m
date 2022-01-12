@@ -6,7 +6,7 @@
 //
 
 #import "DateValueFormatter.h"
-//#import "TimeSeriesChart-Swift.h"
+#import "TimeSeriesChart-Swift.h"
 
 
 @interface DateValueFormatter ()

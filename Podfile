@@ -6,6 +6,6 @@ target 'TimeSeriesChart' do
   use_frameworks!
 
   # Pods for TimeSeriesChart
-  pod 'Charts'
+  #pod 'Charts'
 
 end

@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Charts/Charts-umbrella.h>
-#import <Charts-Swift.h>
+@import Charts;
+/*#import <Charts/Charts-umbrella.h>
+#import <Charts-Swift.h>*/
 
 
 NS_ASSUME_NONNULL_BEGIN

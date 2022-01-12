@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		A0127E86265F00E60042726C /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0127E85265F00E60042726C /* DateValueFormatter.m */; };
 		A0127EA3265F09770042726C /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0127EA2265F09770042726C /* ChartUtils.swift */; };
 		A0127EA6265F09E00042726C /* Sequence+KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0127EA5265F09E00042726C /* Sequence+KeyPath.swift */; };
+		A031DDA2278E4511000C2489 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = A031DDA1278E4511000C2489 /* Charts */; };
 		A034D9D9266944A60041BF85 /* TTMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = A034D9D8266944A60041BF85 /* TTMarker.m */; };
 		A034D9E026698C0B0041BF85 /* TimeSeriesHoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A034D9DF26698C0B0041BF85 /* TimeSeriesHoverViewController.m */; };
 		A034D9E4266999DB0041BF85 /* MarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A034D9E3266999DB0041BF85 /* MarkerView.xib */; };
@@ -78,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1DE1F27E7F5AA4C30342B5C /* Pods_TimeSeriesChart.framework in Frameworks */,
+				A031DDA2278E4511000C2489 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,13 +244,15 @@
 				7682388E2653179B00051F69 /* Sources */,
 				7682388F2653179B00051F69 /* Frameworks */,
 				768238902653179B00051F69 /* Resources */,
-				DE52BA056778037F6EFC5FC9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TimeSeriesChart;
+			packageProductDependencies = (
+				A031DDA1278E4511000C2489 /* Charts */,
+			);
 			productName = TimeSeriesChart;
 			productReference = 768238922653179B00051F69 /* TimeSeriesChart.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +280,9 @@
 				Base,
 			);
 			mainGroup = 768238892653179B00051F69;
+			packageReferences = (
+				A031DDA0278E4511000C2489 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 768238932653179B00051F69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,23 +327,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE52BA056778037F6EFC5FC9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeSeriesChart/Pods-TimeSeriesChart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TimeSeriesChart/Pods-TimeSeriesChart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeSeriesChart/Pods-TimeSeriesChart-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -568,6 +558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A031DDA0278E4511000C2489 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A031DDA1278E4511000C2489 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A031DDA0278E4511000C2489 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7682388A2653179B00051F69 /* Project object */;
 }
